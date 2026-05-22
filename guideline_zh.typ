@@ -62,7 +62,7 @@
 
 == 对约束性词语的规定
 
-Project Hazelita 社群公约（下面简称「本公约」或「公约」）中的约束性词语 *「必须」（MUST）*、*「不得」（MUST NOT）*、*「应」（SHALL）*、*「不应」（SHALL NOT）*、*「应该」（SHOULD）*、*「不应该」（SHOULD NOT）*、*「建议」（RECOMMENDED）*、*「可以」（MAY）* 和 *可选（OPTIONAL）* 按照 RFC 2219 中所述内容进行解释。
+Project Hazelita 社群公约（下面简称「本公约」或「公约」）中的约束性词语 *「必须」（MUST）*、*「不得」（MUST NOT）*、*「应」（SHALL）*、*「不应」（SHALL NOT）*、*「应该」（SHOULD）*、*「不应该」（SHOULD NOT）*、*「建议」（RECOMMENDED）*、*「可以」（MAY）* 和 *可选（OPTIONAL）* 按照 RFC 2119 中所述内容进行解释。
 
 == 术语定义
 
