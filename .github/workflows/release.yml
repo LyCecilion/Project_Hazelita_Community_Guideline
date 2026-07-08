@@ -42,15 +42,15 @@ jobs:
 
       - name: Download fonts
         run: |
-          mkdir -p "$FONT_DIR" "$RUNNER_TEMP/font-src"
+          mkdir -p "$FONT_DIR" "$RUNNER_TEMP/font-src/libertinus" "$RUNNER_TEMP/font-src/noto-sans-cjk" "$RUNNER_TEMP/font-src/noto-serif-cjk"
 
           curl -fsSL "$LIBERTINUS_URL" -o "$RUNNER_TEMP/Libertinus-7.051.tar.zst"
           curl -fsSL "$NOTO_SANS_CJK_URL" -o "$RUNNER_TEMP/NotoSansCJK-OTC.zip"
           curl -fsSL "$NOTO_SERIF_CJK_URL" -o "$RUNNER_TEMP/NotoSerifCJKOTC.zip"
 
-          tar --zstd -xf "$RUNNER_TEMP/Libertinus-7.051.tar.zst" -C "$RUNNER_TEMP/font-src"
-          unzip -q "$RUNNER_TEMP/NotoSansCJK-OTC.zip" -d "$RUNNER_TEMP/font-src"
-          unzip -q "$RUNNER_TEMP/NotoSerifCJKOTC.zip" -d "$RUNNER_TEMP/font-src"
+          tar --zstd -xf "$RUNNER_TEMP/Libertinus-7.051.tar.zst" -C "$RUNNER_TEMP/font-src/libertinus"
+          unzip -oq "$RUNNER_TEMP/NotoSansCJK-OTC.zip" -d "$RUNNER_TEMP/font-src/noto-sans-cjk"
+          unzip -oq "$RUNNER_TEMP/NotoSerifCJKOTC.zip" -d "$RUNNER_TEMP/font-src/noto-serif-cjk"
 
           find "$RUNNER_TEMP/font-src" -type f \
             \( -iname "*.otf" -o -iname "*.ttf" -o -iname "*.otc" -o -iname "*.ttc" \) \
