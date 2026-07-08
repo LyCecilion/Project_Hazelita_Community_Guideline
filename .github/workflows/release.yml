@@ -17,7 +17,7 @@ jobs:
       LIBERTINUS_URL: https://github.com/alerque/libertinus/releases/download/v7.051/Libertinus-7.051.tar.zst
       NOTO_SANS_CJK_URL: https://github.com/notofonts/noto-cjk/releases/download/Sans2.004/03_NotoSansCJK-OTC.zip
       NOTO_SERIF_CJK_URL: https://github.com/notofonts/noto-cjk/releases/download/Serif2.003/04_NotoSerifCJKOTC.zip
-      FONT_DIR: ${{ runner.temp }}/fonts
+      FONT_DIR: .release-fonts
 
     steps:
       - name: Checkout
