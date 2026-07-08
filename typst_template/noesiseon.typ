@@ -4,9 +4,9 @@
 
 #import "@preview/pergamon:0.7.1": *
 
-#let sans = "Libertinus Sans"
+#let sans = ("Libertinus Sans", "Noto Sans CJK SC")
 #let sans-weight = 700
-#let serif = "Libertinus Serif"
+#let serif = ("Libertinus Serif", "Noto Serif CJK SC")
 
 #let text-size = 10pt
 
@@ -28,7 +28,7 @@
   bibstring-style: "long",
 )
 
-#let print-bananote-bibliography() = {
+#let print-noesiseon-bibliography() = {
   print-bibliography(
     format-reference: fref, 
     sorting: "nyt",
@@ -42,10 +42,10 @@
   date: datetime.today(),
   version: none,
   highlight-by: (),
-  banana-color: yellow,
+  accent-color: yellow,
   doc
 ) = {
-  set text(font: serif, size: text-size, weight: "medium", lang: "en", region: "us")
+  set text(font: serif, size: text-size, weight: "medium", lang: "zh", region: "cn")
   set page(margin: (x: 2cm, y: 2.5cm), numbering: "1")
   set par(first-line-indent: 0em, spacing: 1em, justify: true, leading: 0.75em)
 
@@ -89,7 +89,7 @@
         #box(width: 2em)[
             #context {
               align(right)[
-                  #box(fill: banana-color, width: 1em, height: 1em)[
+                  #box(fill: accent-color, width: 1em, height: 1em)[
                     #if it.numbering != none {
                       align(center+horizon,            
                         text(font: sans, weight: sans-weight, size: heading-size, [#counter(heading).get().first()])
@@ -119,11 +119,11 @@
   // ...existing code...
   // Code blocks / inline code
   show raw.where(block: true): set text(
-    font: "Libertinus Mono",
+    font: ("Cascadia Code", "Sarasa Fixed SC"),
     size: 1em / 0.95
   )
   show raw.where(block: false): set text(
-    font: "Libertinus Mono"
+    font: ("Cascadia Code", "Sarasa Fixed SC")
   )
 // ...existing code...
 
