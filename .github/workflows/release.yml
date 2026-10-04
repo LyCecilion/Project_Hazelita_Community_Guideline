@@ -1,4 +1,4 @@
-name: Release PDFs
+name: Release PDF
 
 on:
   push:
@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   build:
-    name: Build and publish PDFs
+    name: Build and publish PDF
     runs-on: ubuntu-latest
 
     env:
@@ -58,16 +58,13 @@ jobs:
 
           find "$FONT_DIR" -maxdepth 1 -type f -print | sort
 
-      - name: Build PDFs
+      - name: Build PDF
         run: |
-          typst compile --font-path "$FONT_DIR" guideline_zh.typ guideline_zh.pdf
-          typst compile --font-path "$FONT_DIR" guideline_en.typ guideline_en.pdf
+          typst compile --font-path "$FONT_DIR" guideline.typ guideline.pdf
 
       - name: Publish release
         uses: softprops/action-gh-release@v2
         with:
-          files: |
-            guideline_zh.pdf
-            guideline_en.pdf
+          files: guideline.pdf
           fail_on_unmatched_files: true
           generate_release_notes: true

@@ -15,10 +15,10 @@ Project Hazelita 社群公约的公开版本与排版源码
 
 ## 📖 关于
 
-本公约用于说明 Project Hazelita 社群的共同底线、两个群聊的定位、
-管理处理流程，以及隐私与数据使用边界。
+本公约用于说明 Project Hazelita 社群的共同底线、唯一群聊 Hazelita Plaza 的
+项目技术交流与生活支持定位、管理处理流程，以及隐私与数据使用边界。
 
-中文版本为主要维护文本；英文版本用于公开参考。若两个版本存在表述差异，以中文版本为准。
+本公约仅维护中文版本，不再提供英文版本。
 
 本仓库主要用于公开归档与版本展示。GitHub Issues 和 Pull Requests
 不作为社群反馈、申诉或修订渠道；如需反馈公约文字、提出社群问题或处理具体个案，
@@ -26,20 +26,20 @@ Project Hazelita 社群公约的公开版本与排版源码
 
 ## 📝 阅读
 
-- 当前版本：`v1.0.0`
-- 发布日期：`2026-07-06`
-- 适用范围：`pub struct ProjectHazelita` 与 `Hazelita Plaza`
+- 当前源码修订：`v2.0.0`（修订中，日期 `2026-10-04`）
+- 已记录的公开版本：`v1.0.0`（发布日期 `2026-07-06`）
+- 当前适用范围：`Hazelita Plaza`；原 `pub struct ProjectHazelita` 群已解散。
 
-- [中文版 PDF](https://github.com/LyCecilion/Project_Hazelita_Community_Guideline/releases/latest/download/guideline_zh.pdf), [中文版 Typst 源码](./guideline_zh.typ)
-- [English PDF](https://github.com/LyCecilion/Project_Hazelita_Community_Guideline/releases/latest/download/guideline_en.pdf), [English Typst source](./guideline_en.typ)
+- [公约 PDF](https://github.com/LyCecilion/Project_Hazelita_Community_Guideline/releases/latest/download/guideline.pdf) · [Typst 源码](./guideline.typ)
+
+PDF 链接指向最新 Release 的 `guideline.pdf` 附件，新文件名将在下一次发布后生效。尚未发布的修订可使用当前源码本地构建；已发布的历史附件保持不变。
 
 ## 🚢 构建
 
 本文档使用 [Typst](https://typst.app/) 排版：
 
 ```sh
-typst compile guideline_zh.typ guideline_zh.pdf
-typst compile guideline_en.typ guideline_en.pdf
+typst compile guideline.typ guideline.pdf
 ```
 
 正式 PDF 由 GitHub Actions 在推送版本 tag 时自动构建，并作为 GitHub Release
